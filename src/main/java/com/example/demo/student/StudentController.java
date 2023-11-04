@@ -42,4 +42,9 @@ public class StudentController {
         studentService.updateStudent(id , name , email);
     }
 
+    @GetMapping("details")
+    public String details(){
+        return "Hellow I love all";
+    }
+
 }

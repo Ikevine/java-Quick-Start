@@ -1,9 +1,6 @@
 package com.example.demo.student;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.Transient;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -13,6 +10,11 @@ import java.time.Period;
 public class Student {
     @Id
     private Long Id;
+    @Column(
+            name = "kevine",
+            updatable = false
+
+    )
     private String name;
     private String email;
     private LocalDate dob;
