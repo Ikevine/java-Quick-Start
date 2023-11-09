@@ -11,6 +11,6 @@ import java.util.Optional;
 //are used in our service to implement the logic
 public interface StudentRepository extends JpaRepository<Student , Long> {
 
-    Optional<Student> findStudentByEmail(String email);
+    Student findStudentByEmail(String email);
 
 }

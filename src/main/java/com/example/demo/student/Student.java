@@ -10,11 +10,6 @@ import java.time.Period;
 public class Student {
     @Id
     private Long Id;
-    @Column(
-            name = "kevine",
-            updatable = false
-
-    )
     private String name;
     private String email;
     private LocalDate dob;

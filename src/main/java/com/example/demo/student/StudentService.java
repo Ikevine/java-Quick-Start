@@ -21,14 +21,14 @@ public class StudentService {
         return  studentRepository.findAll();
     }
 
-    public void addNewStudent(Student student) {
-        //business logic
-        Optional studentByEmail =  studentRepository.findStudentByEmail(student.getEmail());
-        if(studentByEmail.isPresent()){
-            throw new IllegalStateException("Email is taken");
-        }
-        studentRepository.save(student);
-    }
+//    public void addNewStudent(Student student) {
+//        //business logic
+//        Optional studentByEmail =  studentRepository.findStudentByEmail(student.getEmail());
+//        if(studentByEmail.isPresent()){
+//            throw new IllegalStateException("Email is taken");
+//        }
+//        studentRepository.save(student);
+//    }
 
     public void deleteStudent(Long id) {
         //deleting a student we need to know that we have them
@@ -52,13 +52,13 @@ public class StudentService {
             student.setName(name);
         }
 
-        if(email != null && email.length()>0 && Objects.equals(student.getEmail(), email)){
-            //check if the email is taken
-            Optional<Student> emailtaken = studentRepository.findStudentByEmail(email);
-            if (emailtaken.isPresent()){
-                throw new IllegalStateException();
-            }
-            student.setEmail(email);
-        }
+//        if(email != null && email.length()>0 && Objects.equals(student.getEmail(), email)){
+//            //check if the email is taken
+//            Optional<Student> emailtaken = studentRepository.findStudentByEmail(email);
+//            if (emailtaken.isPresent()){
+//                throw new IllegalStateException();
+//            }
+//            student.setEmail(email);
+//        }
     }
 }
